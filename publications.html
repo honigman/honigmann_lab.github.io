@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Honigmann Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="branding">
+                <h1>Honigmann Lab</h1>
+                <p>Membrane Organization of Cells and Tissues</p>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html#">Home</a></li>
+                    <li><a href="index.html#research">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+   <section id="publications" class="section">
+       <div id="publications-container" class="container">
+           <!-- Publications will be dynamically loaded here -->
+       </div>
+   </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Honigmann Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Menu Functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('open');
+            });
+        }
+    </script>
+</body>
+</html>
+
+<script>
+    // Load the generated HTML content
+    document.addEventListener("DOMContentLoaded", function () {
+        const publicationsContainer = document.getElementById("publications-container");
+
+        // Fetch the generated publications.html file
+        fetch("bib_publications.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.text();
+            })
+            .then(html => {
+                // Inject the HTML content into the publications container
+                publicationsContainer.innerHTML = html;
+            })
+            .catch(error => {
+                console.error("There was a problem loading the publications:", error);
+            });
+    });
+</script>

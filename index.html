@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honigmann Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="branding">
+                <h1>Honigmann Lab</h1>
+                <p>Membrane Organization of Cells and Tissues</p>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html#">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Image -->
+    <section class="hero">
+        <img id="hero-image" src="images/ZO1_Actin_Myosin_Crop.gif" alt="Lab Banner" class="hero-image" onclick="changeImage()">
+        <div id="hero-text" class="hero-text">
+            <p>In vitro reconstitution: Cortex reorganization by myosin</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="about-container">
+            <div class="about-text">
+                <p><strong>How do biological membranes enable functions across scales?</strong> <br>
+                    We combine molecular reconstitution with quantitative cell and tissue imaging to study the following topics:
+                </p>
+                <p>
+                    From molecules to organelles: <strong>How is the lipid composition of organelles controlled?</strong><br>
+                    From cells to tissue: <strong>How do cell interfaces control and sense tissue mechanics and shape?</strong><br>
+                    From tissue to organs: <strong>How are fluid cavities (lumen) formed and maintained?</strong>
+                </p>
+            </div>
+            <div class="about-picture">
+                <img src="images/group_picture_2024-2.jpg" alt="Honigmann Lab Group Picture">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:honigmanlab@example.com">honigmanlab@example.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Honigmann Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Menu Functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('open');
+            });
+        }
+
+        // Image and Text Rotator
+        const images = [
+            "images/ZO1_Actin_Myosin_Crop.gif",
+            "images/TJ formation after Ca switch (NG-ZO1).gif",
+            "images/MDCK_Lumen_Cutting.gif",
+            "images/mESC_Interface_Dynamcics.gif"
+        ];
+
+        const imageTexts = [
+            "In vitro reconstitution: Cortex reorganization by myosin",
+            "Tissue culture: ZO1 dynamics during formation of tight junctions (Beutel 2019)",
+            "Measuring lumen pressure via laser cutting (Mukenhirn 2024)",
+            "Cell-Cell Interface Dynamics of mESC Epiblast Organoids"
+        ];
+
+        let currentIndex = 0;
+        const heroImage = document.getElementById("hero-image");
+        const heroText = document.getElementById("hero-text");
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            heroImage.src = images[currentIndex];
+            heroText.innerHTML = `<p>${imageTexts[currentIndex]}</p>`;
+        }
+
+        setInterval(changeImage, 10000); // Rotate every 10 seconds
+    </script>
+</body>
+</html>

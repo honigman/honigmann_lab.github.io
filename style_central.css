@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.6;
+    color: #D3D3D3;
+    background-color: #000;
+}
+
+/* Header */
+.header {
+    background: #00001A; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 1rem 0; /* Slimmer padding */
+}
+
+.header h1 {
+    font-size: 2rem; /* Slightly smaller font size */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.3rem; /* Adjust font size for tagline */
+    margin: 0; /* Remove extra margin */
+}
+
+/* Navbar */
+.navbar {
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin: 0 1rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative; /* Enables positioning of child elements relative to this container */
+    display: inline-block; /* Ensures the container wraps around the image */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    text-align: center; /* Fallback alignment */
+    max-width: 800px; /* Maximum width of the container */
+    max-height: 500px; /* Maximum height of the container (80% of viewport height) */
+    margin: 0 auto; /* Center the container horizontally in the viewport */
+    width: 100%; /* Allow the container to shrink if needed */
+    height: auto; /* Adjust height dynamically */
+    overflow: hidden; /* Prevent content overflow */
+    border: 1px solid #fff; /* Adds a white border around the entire container */
+    border-radius: 14px; /* Optional: Adds rounded corners */
+}
+
+.hero img {
+    width: 100%; /* Scale the image to fit its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent the image from exceeding its container width */
+    display: block; /* Ensures proper alignment */
+}
+
+.hero-text {
+    position: absolute; /* Positions the text relative to the .hero container */
+    bottom: 10px; /* Positions the text 10px from the bottom of the container */
+    left: 50%; /* Moves the text to the horizontal center */
+    transform: translateX(-50%); /* Centers the text by shifting it left by 50% of its width */
+    color: white; /* Sets the text color to white for contrast */
+    font-size: 1.0rem; /* Adjusts the text size */
+
+    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background for better readability */
+
+    max-width: 100%; /* Limits text box width to the width of .hero container */
+    width: 100%; /* Makes the text box responsive and adjusts proportion */
+    text-align: center; /* Centers text inside the box */
+}
+
+/* Section */
+.section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+    color: #007acc;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
