@@ -8,13 +8,13 @@
     <style>
         /* Add specific styles for the research items */
         .research-item {
-            margin-bottom: 20px; /* Add spacing between research items */
+            margin-bottom: 20px; /* Spacing between research items */
         }
 
-        .research-item h3 {
+        .research-item h4 {
             margin-bottom: 10px; /* Add spacing below the heading */
             color: #007acc; /* Customize heading color */
-            font-size: 1.5rem; /* Adjust font size as needed */
+            font-size: 1.2rem; /* Adjust font size as needed */
             text-align: left;
         }
 
@@ -36,6 +36,18 @@
             margin: 0; /* Remove default paragraph margins */
             font-size: 1rem; /* Set font size for the text */
             line-height: 1.6; /* Adjust line spacing for readability */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .research-content {
+                flex-direction: column; /* Stack image and text vertically */
+                align-items: left; /* Center align content */
+            }
+
+            .research-image {
+                margin-bottom: 10px; /* Add spacing below the image */
+            }
         }
     </style>
 </head>
@@ -72,7 +84,7 @@
             </p>
 
             <div class="research-item">
-                <h4>How do epithelial cells organize adhesion complexes at cell-cell interfaces?</h4>
+                <h4>How do cells organize adhesion complexes at cell-cell interfaces?</h4>
                 <div class="research-content">
                     <img src="images/Apical_Junction.png" alt="Adhesion Complexes" class="research-image">
                     <p>
@@ -92,7 +104,7 @@
             </div>
 
             <div class="research-item">
-                <h4>How do epithelial cells promote the formation of tissue cavities (lumen)?</h4>
+                <h4>How do cells promote the formation of tissue cavities (lumen)?</h4>
                 <div class="research-content">
                     <img src="images/Lumen_Project.png" alt="Lumen Formation" class="research-image">
                     <p>
