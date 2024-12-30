@@ -14,6 +14,16 @@ body {
     text-align: left; /* Align body text to the left by default */
 }
 
+/* Color and behavior of links */
+a {
+    color: lightblue; /* Set the default link color to light blue */
+    text-decoration: none; /* Remove underline for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover for emphasis */
+}
+
 /* Header */
 
 /* Make the header sticky */
