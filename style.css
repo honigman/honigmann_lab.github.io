@@ -178,14 +178,16 @@ a:hover {
     flex-direction: column; /* Stack items vertically */
     gap: 1rem; /* Space between text and image */
     align-items: flex-start; /* Align items to the left */
+    padding: 0 10px; /* Add padding to ensure content doesn't touch the edges */
 
 }
 
 
 .about-text {
     flex: 1; /* Allow the text to grow as needed */
-    min-width: 400px; /* Ensure the text section is at least 400px wide */
+    /*min-width: 400px; /* Ensure the text section is at least 400px wide */
     font-size: 1rem; /* Set font size for about text */
+    max-width: 990px;
 }
 
 .about-picture {
