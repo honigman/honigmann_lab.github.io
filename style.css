@@ -24,6 +24,7 @@ a:hover {
     text-decoration: underline; /* Optional: Add underline on hover for emphasis */
 }
 
+
 /* Header */
 
 /* Make the header sticky */
@@ -37,7 +38,7 @@ a:hover {
 }
 
 .header-container {
-    max-width: 1000px; /* Limit the width to 1000px */
+    max-width: 990px; /* Limit the width to 1000px */
     display: flex; /* Flexbox for horizontal alignment */
     justify-content: space-between; /* Space between branding and navbar */
     align-items: center; /* Vertically align branding and navbar */
@@ -138,7 +139,7 @@ a:hover {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    max-height: 500px;
+    max-height: 400px;
     max-width: 1000px; /* Restrict maximum width to 1000px */
     width: calc(100% - 10px); /* Ensure space for left and right margins */
     height: auto;
@@ -162,7 +163,7 @@ a:hover {
     bottom: 10px;
     left: 10px;
     color: white;
-    font-size: 1rem; /* Adjusted font size for hero text */
+    font-size: 0.8rem; /* Adjusted font size for hero text */
     font-family: Arial, sans-serif; /* Original font */
     background: rgba(0, 0, 0, 0.5);
     max-width: 100%;
@@ -265,13 +266,16 @@ a:hover {
 }
 
 .previous-members-table {
-    width: 80%;
+    width: 100%;
+    max-width: 990px;
     border-collapse: collapse;
     margin: 1rem 0;
+    font-size: 0.9rem; /* Adjust font size as needed */
 }
 
 .previous-members-table th,
 .previous-members-table td {
+    font-size: 0.9rem; /* Adjust font size as needed */
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
