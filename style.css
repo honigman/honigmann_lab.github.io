@@ -105,7 +105,17 @@ a:hover {
 @media (max-width: 900px) {
     .menu-toggle {
         display: block; /* Show toggle button on small screens */
+        font-size: 2rem; /* Increase the font size for better visibility */
+        width: 60px; /* Set a larger width */
+        height: 60px; /* Set a larger height */
+        padding: 10px; /* Add padding for a larger clickable area */
+        background-color: #000; /* Optional: Add background color */
+        color: #fff; /* Ensure the color is readable */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Add rounded corners if desired */
+        cursor: pointer; /* Show pointer cursor */
     }
+
 
     .nav-links {
         display: none; /* Hide links by default on small screens */
@@ -141,13 +151,13 @@ a:hover {
     text-align: left;
     max-height: 400px;
     max-width: 1000px; /* Restrict maximum width to 1000px */
-    width: calc(100% - 10px); /* Ensure space for left and right margins */
+    width: calc(100% - 40px); /* Ensure space for left and right margins */
     height: auto;
     overflow: hidden;
     border: 1px solid #fff;
     border-radius: 14px;
     padding: 0rem;
-    /*margin: 0 auto; /* Center the hero section */
+    margin: 15px; /* Center the hero section */
 }
 
 
