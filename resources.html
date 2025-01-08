@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Honigmann Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .microscopy-setup {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            max-width: 1000px;
+        }
+
+        .microscopy-setup img {
+            width: 400px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .microscopy-setup div {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .microscopy-setup {
+                flex-direction: column;
+                align-items: left;
+            }
+
+            .microscopy-setup img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="branding">
+                <h1>Honigmann Lab</h1>
+                <h2 style="color: lightblue;">Resources</h2>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+   <section id="Resources" class="section">
+       <div id="Resources-container" class="container">
+           <h2 style="color: lightblue;">Software & Data</h2>
+            <p>
+                Software and data related to our publications can be found at:
+           <a href="https://github.com/orgs/Honigmann-Lab-BIOTEC/repositories" style="text-decoration: none; color: lightblue;">
+                        <strong>Github repositories</strong>
+                    </a></p>
+       </div>
+
+        <div id="Microscopy-container" class="container">
+           <h2 style="color: lightblue;">Microscopy</h2>
+            <p>We have the following setups:</p>
+
+            <div class="microscopy-setup">
+                <img src="images/Abberior STED.jpg" alt="Abberior STED">
+                <div>
+                    <h3>Abberior STED (Confocal Super-resolution)</h3>
+                    <p>
+                        Olympus IX83 inverted stand with perfect focus. 4 excitation lasers + 775 nm depletion laser compatible for 2-color STED. Includes a PicoQuant module offering <strong> FCS, FLIM, and homo-FRET </strong> capabilities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="microscopy-setup">
+                <img src="images/ASI SCAPE.jpg" alt="ASI SCAPE">
+                <div>
+                    <h3>ASI SCAPE (3D Tissue Dynamics) </h3>
+                    <p>
+                        Applied Scientific Instrument (ASI) design. 3 excitation lasers with dual-camera Kinetix22 for wide FOV and ultra-fast gentle volumetric imaging. Includes temperature and CO2 environmental chamber.
+                    </p>
+                </div>
+            </div>
+
+            <div class="microscopy-setup">
+                <img src="images/TIRF.jpg" alt="TIRF">
+                <div>
+                    <h3>TIRF (Single Molecule Super-resolution)</h3>
+                    <p>
+                        Olympus IX83 inverted stand with custom focus-lock. 3 excitation lasers, XYZ piezo stage (ASI), and microfluidic Aria for multiplexed imaging (DNA-PAINT).
+                    </p>
+                </div>
+            </div>
+
+            <div class="microscopy-setup">
+                <img src="images/Nikon Spinning-disk.jpg" alt="Nikon Spinning Disk">
+                <div>
+                    <h3>Nikon Spinning Disk (All-purpose workhorse)</h3>
+                    <p>
+                        Nikon Ti-Eclipse with Yokogawa CSU-X spinning disk unit and perfect focus. Features 5 excitation lasers, fast 3D imaging, TIRF, FRAP, and an environmental chamber.
+                    </p>
+                </div>
+            </div>
+
+            <div class="microscopy-setup">
+                <img src="images/Deltavision Wide-field.jpg" alt="Deltavision Wide-Field Microscope">
+                <div>
+                    <h3>Deltavision Wide-Field Microscope (2D Tissue Dynamics)</h3>
+                    <p>
+                        Equipped with autofocus, temperature and CO2 box, and an automated plate reader for screening applications.
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                In addition, we have access to the <a href="https://tu-dresden.de/cmcb/technologie-plattform/facilities/light-microscopy" target="_blank" style="color: lightblue;">CMCB light microscopy facility</a>.
+            </p>
+
+            <h2 style="color: lightblue;">Cell Culture & Genetic Engineering</h2>
+
+            <div class="microscopy-setup">
+                <img src="images/CellCulture.jpg" alt="FlowHood">
+                <div>
+                     <p>We use immortalized and stem cell lines for our research. We use CRISPR to produce KO and fluorescent KI cell lines.
+                         We use inducible protein degradation systems (Degron, PROTAC) to study dynamics of KO phenotypes.
+                         Please contact us if you want to use any published cell line.</p>
+                </div>
+            </div>
+
+            <h2 style="color: lightblue;">Protein Expression & Purification</h2>
+
+            <div class="microscopy-setup">
+                <img src="images/Protein_Purification.jpg" alt="Akta">
+                <div>
+                     <p>We use bacterial and insect cell expression systems in combination with chromatography to produce
+                     high quality proteins for our molecular reconstitution projects.We collaborate with the
+                         <a href="https://tu-dresden.de/cmcb/biotec/forschungsgruppen/alberti" style="text-decoration: none; color: lightblue;">
+                        <strong> Alberti Lab</strong>
+                    </a>
+
+                     for protein characterization and quality control.</p>
+                </div>
+            </div>
+
+            <h2 style="color: lightblue;">Wetlab</h2>
+
+            <div class="microscopy-setup">
+                <img src="images/WetLab.jpg" alt="Wetlab">
+                <div>
+                     <p>We have a well-equipped wetlab space for our molecular biology and biochemistry work.</p>
+                </div>
+            </div>
+
+       </div>
+   </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Honigmann Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Menu Functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('open');
+            });
+        }
+    </script>
+</body>
+</html>
