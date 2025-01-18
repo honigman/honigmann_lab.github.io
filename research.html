@@ -11,6 +11,11 @@
             margin-bottom: 20px; /* Spacing between research items */
         }
 
+        .container {
+        max-width: 1000px; /* Maximum width for the content */
+        padding: 0 5px;   /* Add some padding for better readability */
+        }
+
         .research-item h4 {
             margin-bottom: 10px; /* Add spacing below the heading */
             color: lightblue; /* Customize heading color */
@@ -20,6 +25,7 @@
 
         .research-content {
             display: flex;
+
             flex-direction: row; /* Place image and text side by side */
             gap: 15px; /* Add spacing between image and text */
             align-items: flex-start; /* Align items at the top */
@@ -30,9 +36,11 @@
             height: auto; /* Maintain aspect ratio */
             border-radius: 6px; /* Optional: Add rounded corners */
             border: 1px solid #ddd; /* Optional: Add border around the image */
+            margin-bottom: 10px; /* Add spacing below the image */
         }
 
         .research-content p {
+
             margin: 0; /* Remove default paragraph margins */
             font-size: 1rem; /* Set font size for the text */
             line-height: 1.6; /* Adjust line spacing for readability */
@@ -45,9 +53,6 @@
                 align-items: left; /* Center align content */
             }
 
-            .research-image {
-                margin-bottom: 10px; /* Add spacing below the image */
-            }
         }
     </style>
 </head>
@@ -78,7 +83,7 @@
         <div class="container">
 
             <p>
-                We are interested in the <strong>fundamental mechanisms</strong> underlying the organization of <strong>cell interfaces</strong>.
+                We are interested in the <strong>fundamental mechanisms</strong> underlying the <strong>functions of cell interfaces</strong>.
                 Eukaryotic cells synthesize over 1000 lipid and glycan species and 30% of their genes encode membrane-associated proteins.
                 Together these molecules collectively self-organize into membrane structures that provide important cellular functions.
                 Our vision is to <strong>understand and control</strong> the connection between the super-molecular organization of cell interfaces
