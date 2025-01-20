@@ -182,13 +182,23 @@ a:hover {
     padding: 5px;
 }
 
+.top-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between text and image */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0px 15px; /* Add padding to ensure content doesn't touch the edges */
+
+}
+
+
 /* About Section Layout */
 .about-container {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     gap: 1rem; /* Space between text and image */
     align-items: flex-start; /* Align items to the left */
-    padding: 0 10px; /* Add padding to ensure content doesn't touch the edges */
+    padding: 0px 0px; /* Add padding to ensure content doesn't touch the edges */
 
 }
 
