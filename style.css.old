@@ -7,115 +7,347 @@
 
 body {
     font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px; /* Global font size for consistency */
     line-height: 1.6;
     color: #D3D3D3;
     background-color: #000;
+    text-align: left; /* Align body text to the left by default */
 }
+
+/* Color and behavior of links */
+a {
+    color: lightblue; /* Set the default link color to light blue */
+    text-decoration: none; /* Remove underline for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover for emphasis */
+}
+
 
 /* Header */
+
+/* Make the header sticky */
 .header {
-    background: #00001A; /* Black background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 1rem 0; /* Slimmer padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header appears on top of other elements */
+    background-color: #000; /* Ensure consistent background color */
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
 }
 
-.header h1 {
-    font-size: 2rem; /* Slightly smaller font size */
+.header-container {
+    max-width: 990px; /* Limit the width to 1000px */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between branding and navbar */
+    align-items: center; /* Vertically align branding and navbar */
+    flex-wrap: nowrap; /* Prevent wrapping of navbar */
+}
+
+.branding {
+    display: flex;
+    flex-direction: column; /* Stack title and tagline vertically */
+    justify-content: center;
+}
+
+.branding h1 {
+    font-size: 2rem; /* Slightly larger font size for header */
+    font-family: Arial, sans-serif; /* Original font */
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin: 0;
 }
 
-.header p {
-    font-size: 1.3rem; /* Adjust font size for tagline */
-    margin: 0; /* Remove extra margin */
+.branding p {
+    font-size: 1.2rem; /* Adjusted font size for tagline */
+    font-family: Arial, sans-serif; /* Original font */
+    margin: 0;
 }
 
 /* Navbar */
 .navbar {
-    background: #000;
-    color: #fff;
-    padding: 0.5rem 0.5rem;
-}
-
-.navbar .nav-links {
     display: flex;
-    justify-content: center;
-    list-style: none;
+    align-items: center; /* Vertically align links and toggle button */
+    position: relative; /* Ensures dropdown is positioned relative to the navbar */
 }
 
-.navbar .nav-links li {
-    margin: 0 1rem;
+.nav-links {
+    display: flex; /* Always display links horizontally on large screens */
+    gap: 1rem;
 }
 
-.navbar .nav-links a {
-    color: #fff;
+.nav-links li {
+    list-style: none; /* Remove default list styling */
+}
+
+.nav-links a {
+    color: #fff; /* White text */
+    font-family: Arial, sans-serif; /* Original font */
+    font-size: 1rem; /* Ensure consistent font size for navbar */
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar .nav-links a:hover {
+.nav-links a:hover {
     text-decoration: underline;
 }
 
-.hero {
-    position: relative; /* Enables positioning of child elements relative to this container */
-    display: inline-block; /* Ensures the container wraps around the image */
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
-    text-align: center; /* Fallback alignment */
-    max-width: 800px; /* Maximum width of the container */
-    max-height: 500px; /* Maximum height of the container (80% of viewport height) */
-    margin: 0 auto; /* Center the container horizontally in the viewport */
-    width: 100%; /* Allow the container to shrink if needed */
-    height: auto; /* Adjust height dynamically */
-    overflow: hidden; /* Prevent content overflow */
-    border: 1px solid #fff; /* Adds a white border around the entire container */
-    border-radius: 14px; /* Optional: Adds rounded corners */
+/* Responsive Dropdown (small screens) */
+.menu-toggle {
+    display: none; /* Hidden by default (only visible on small screens) */
+    background: none;
+    border: none;
+    color: #fff; /* White toggle icon */
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on small screens */
+        font-size: 2rem; /* Increase the font size for better visibility */
+        width: 60px; /* Set a larger width */
+        height: 60px; /* Set a larger height */
+        padding: 10px; /* Add padding for a larger clickable area */
+        background-color: #000; /* Optional: Add background color */
+        color: #fff; /* Ensure the color is readable */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Add rounded corners if desired */
+        cursor: pointer; /* Show pointer cursor */
+    }
+
+
+    .nav-links {
+        display: none; /* Hide links by default on small screens */
+        flex-direction: column; /* Stack links vertically in dropdown */
+        background: #000; /* Black dropdown background */
+        width: auto;
+        padding: 1rem;
+        position: absolute;
+        top: 100%; /* Dropdown appears below the navbar */
+        right: 0; /* Align dropdown to the right edge */
+        z-index: 10; /* Ensure dropdown appears on top */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show dropdown when 'open' class is added */
+    }
+
+    .nav-links li {
+        margin-bottom: 0.5rem; /* Add spacing between dropdown items */
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    max-height: 400px;
+    max-width: 1000px; /* Restrict maximum width to 1000px */
+    width: calc(100% - 40px); /* Ensure space for left and right margins */
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #fff;
+    border-radius: 14px;
+    padding: 0rem;
+    margin: 15px; /* Center the hero section */
+}
+
+
 .hero img {
-    width: 100%; /* Scale the image to fit its container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent the image from exceeding its container width */
-    display: block; /* Ensures proper alignment */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 
 .hero-text {
-    position: absolute; /* Positions the text relative to the .hero container */
-    bottom: 10px; /* Positions the text 10px from the bottom of the container */
-    left: 50%; /* Moves the text to the horizontal center */
-    transform: translateX(-50%); /* Centers the text by shifting it left by 50% of its width */
-    color: white; /* Sets the text color to white for contrast */
-    font-size: 1.0rem; /* Adjusts the text size */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.8rem; /* Adjusted font size for hero text */
+    font-family: Arial, sans-serif; /* Original font */
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+}
 
-    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background for better readability */
+.top-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between text and image */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0px 15px; /* Add padding to ensure content doesn't touch the edges */
 
-    max-width: 100%; /* Limits text box width to the width of .hero container */
-    width: 100%; /* Makes the text box responsive and adjusts proportion */
-    text-align: center; /* Centers text inside the box */
+}
+
+
+/* About Section Layout */
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between text and image */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0px 0px; /* Add padding to ensure content doesn't touch the edges */
+
+}
+
+
+.about-text {
+    flex: 1; /* Allow the text to grow as needed */
+    /*min-width: 400px; /* Ensure the text section is at least 400px wide */
+    font-size: 1rem; /* Set font size for about text */
+    max-width: 990px;
+}
+
+.about-picture {
+    flex: 1;
+    text-align: left; /* Center the image */
+    width: 100%; /* Ensure image spans full width of container */
+    max-width: 1000px;
+}
+
+.about-picture img {
+    width: auto;
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 14px; /* Optional: Add rounded corners */
+    border: 1px solid #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
 }
 
 /* Section */
 .section {
     padding: 2rem 1rem;
-    text-align: center;
+    text-align: left;
+    font-size: 1rem; /* Global section font size */
 }
 
 .section h2 {
     margin-bottom: 1rem;
     color: #007acc;
+    font-family: Arial, sans-serif; /* Original font */
+    font-size: 1.5rem; /* Consistent heading font size */
+    text-align: left;
 }
 
 .section p {
     margin-bottom: 1rem;
+    text-align: left;
+    font-family: Arial, sans-serif; /* Original font */
+    font-size: 1rem; /* Consistent paragraph font size */
 }
 
 /* Footer */
 .footer {
     background: #333;
     color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+    text-align: left;
+    padding: 1rem;
+    font-family: Arial, sans-serif; /* Original font */
+    font-size: 1rem; /* Consistent footer font size */
+}
+
+.team-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.team-list li {
+    margin-bottom: 20px; /* Add spacing between team members */
+}
+
+.team-member {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+}
+
+.team-photo {
+    width: 150px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Add spacing between image and text */
+}
+
+.team-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.team-info p {
+    margin: 5px 0;
+}
+
+.previous-members-table {
+    width: 100%;
+    max-width: 990px;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem; /* Adjust font size as needed */
+}
+
+.previous-members-table th,
+.previous-members-table td {
+    font-size: 0.9rem; /* Adjust font size as needed */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.previous-members-table th {
+    background-color: #007acc;
+    color: white;
+}
+
+    .research-item {
+        margin-bottom: 20px; /* Spacing between research items */
+    }
+
+    .research-item h4 {
+        margin-bottom: 10px; /* Add spacing below the heading */
+        color: #007acc; /* Customize heading color */
+        font-size: 1rem; /* Adjust font size as needed */
+        text-align: left;
+    }
+
+    .research-content {
+        display: flex;
+        flex-direction: row; /* Image and text side by side */
+        gap: 15px; /* Spacing between image and text */
+        align-items: flex-start; /* Align items at the top */
+    }
+
+    .research-image {
+        width: 200px; /* Fixed width for images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        border: 1px solid #ddd; /* Optional: Add border around the image */
+    }
+
+    .research-content p {
+        margin: 0; /* Remove default paragraph margins */
+        font-size: 1rem; /* Set font size for the text */
+        line-height: 1.6; /* Adjust line spacing for readability */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .research-content {
+            flex-direction: column; /* Stack image and text vertically */
+            align-items: center; /* Center align content */
+        }
+
+        .research-image {
+            margin-bottom: 10px; /* Add spacing below the image */
+        }
+    }
 }
