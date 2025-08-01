@@ -1,13 +1,12 @@
-
 /* Ensure the body content is centered */
 body {
     font-family: "Open Sans", Arial, sans-serif;
-    text-align: center; /* Centers inline content, but not block-level elements */
+    text-align: center;
     font-size: 16px;
     line-height: 1.6;
     color: #D3D3D3;
     background-color: #000;
-    margin: 0, 0; /* Remove default browser margin */
+    margin: 0;
 }
 
 /* Add explicit centering for block elements */
@@ -16,83 +15,80 @@ body {
 .about-container,
 .section,
 .footer .container {
-    max-width: 960px; /* Restrict the width for a cleaner look */
-    margin: 0 auto; /* Center horizontally */
-    text-align: left; /* Align text content inside the blocks */
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 /* Color and behavior of links */
 a {
-    color: lightblue; /* Set the default link color to light blue */
-    text-decoration: none; /* Remove underline for links */
+    color: lightblue;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Optional: Add underline on hover for emphasis */
+    text-decoration: underline;
 }
 
-
 /* Header */
-
-/* Make the header sticky */
 .header {
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure the header appears on top of other elements */
-    background-color: #000; /* Ensure consistent background color */
-    padding: 15px 0px; /* Add horizontal padding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+    z-index: 1000;
+    background-color: #000;
+    padding: 15px 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
-    max-width: 960px; /* Limit the width to 1000px */
-    display: flex; /* Flexbox for horizontal alignment */
-    justify-content: space-between; /* Space between branding and navbar */
-    align-items: center; /* Vertically align branding and navbar */
-    padding: 0px 15px; /* Add horizontal padding */
-    flex-wrap: nowrap; /* Prevent wrapping of navbar */
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    flex-wrap: nowrap;
 }
 
 .branding {
     display: flex;
-    flex-direction: column; /* Stack title and tagline vertically */
+    flex-direction: column;
     justify-content: center;
 }
 
 .branding h1 {
-    font-size: 2rem; /* Slightly larger font size for header */
-    font-family: Arial, sans-serif; /* Original font */
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     margin: 0;
 }
 
 .branding p {
-    font-size: 1.2rem; /* Adjusted font size for tagline */
-    font-family: Arial, sans-serif; /* Original font */
-    margin: 0; /* Reduce vertical spacing */
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
-    align-items: center; /* Vertically align links and toggle button */
-    position: relative; /* Ensures dropdown is positioned relative to the navbar */
+    align-items: center;
+    position: relative;
 }
 
 .nav-links {
-    display: flex; /* Always display links horizontally on large screens */
+    display: flex;
     gap: 1rem;
 }
 
 .nav-links li {
-    list-style: none; /* Remove default list styling */
+    list-style: none;
 }
 
 .nav-links a {
-    color: #fff; /* White text */
-    font-family: Arial, sans-serif; /* Original font */
-    font-size: 1rem; /* Ensure consistent font size for navbar */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
 }
@@ -103,68 +99,61 @@ a:hover {
 
 /* Responsive Dropdown (small screens) */
 .menu-toggle {
-    display: none; /* Hidden by default (only visible on small screens) */
+    display: none;
     background: none;
     border: none;
-    color: #fff; /* White toggle icon */
+    color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 @media (max-width: 900px) {
     .menu-toggle {
-        display: block; /* Show toggle button on small screens */
-        font-size: 2rem; /* Increase the font size for better visibility */
-        width: 60px; /* Set a larger width */
-        height: 60px; /* Set a larger height */
-        padding: 10px; /* Add padding for a larger clickable area */
-        background-color: #000; /* Optional: Add background color */
-        color: #fff; /* Ensure the color is readable */
-        border: none; /* Remove border */
-        border-radius: 5px; /* Add rounded corners if desired */
-        cursor: pointer; /* Show pointer cursor */
+        display: block;
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
-
     .nav-links {
-        display: none; /* Hide links by default on small screens */
-        flex-direction: column; /* Stack links vertically in dropdown */
-        background: #000; /* Black dropdown background */
+        display: none;
+        flex-direction: column;
+        background: #000;
         width: auto;
         padding: 1rem;
         position: absolute;
-        top: 100%; /* Dropdown appears below the navbar */
-        right: 0; /* Align dropdown to the right edge */
-        z-index: 10; /* Ensure dropdown appears on top */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+        top: 100%;
+        right: 0;
+        z-index: 10;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     .nav-links.open {
-        display: flex; /* Show dropdown when 'open' class is added */
+        display: flex;
     }
 
     .nav-links li {
-        margin-bottom: 0.5rem; /* Add spacing between dropdown items */
+        margin-bottom: 0.5rem;
     }
 }
 
-
 /* Hero Section */
-
-
 .hero {
     position: relative;
     max-width: 960px;
     max-height: 400px;
-    /* width: calc(100% - 40px); /* May cause inconsistency */
     padding: 0px 0px;
-    margin: 15px auto; /* Margin could add extra space */
+    margin: 15px auto;
     border: 1px solid #fff;
     border-radius: 14px;
     overflow: hidden;
 }
-
-
 
 .hero img {
     width: 100%;
@@ -179,8 +168,8 @@ a:hover {
     bottom: 10px;
     left: 10px;
     color: white;
-    font-size: 0.8rem; /* Adjusted font size for hero text */
-    font-family: Arial, sans-serif; /* Original font */
+    font-size: 0.8rem;
+    font-family: Arial, sans-serif;
     background: rgba(0, 0, 0, 0.5);
     max-width: 100%;
     width: 100%;
@@ -194,63 +183,63 @@ a:hover {
     align-items: flex-start;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0; /* Remove padding */
-    gap: 0; /* Minimal gap between elements */
+    padding: 0;
+    gap: 0;
 }
 
 .about-text {
-    text-align: left; /* Align text inside to the left */
-    width: 100%; /* Make sure the text spans the container width */
-    padding: 0px 0px; /* Add horizontal padding */
+    text-align: left;
+    width: 100%;
+    padding: 0px 0px;
     margin: 0;
 }
 
 /* About Section Layout */
 .about-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 0rem 2rem; /* Space between text and image */
-    align-items: flex-start; /* Align items to the left */
+    flex-direction: column;
+    gap: 0rem 2rem;
+    align-items: flex-start;
     max-width: 960px;
-    padding: 0px 0px; /* Add padding to ensure content doesn't touch the edges */
+    padding: 0px 0px;
 }
 
 .about-picture {
     flex: 1;
-    text-align: left; /* Center the image */
-    width: 100%; /* Ensure image spans full width of container */
+    text-align: left;
+    width: 100%;
     max-width: 960px;
 }
 
 .about-picture img {
     width: auto;
-    max-width: 100%; /* Ensure the image fits within the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 14px; /* Optional: Add rounded corners */
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
     border: 1px solid #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Section */
 .section {
     padding: 0rem 1rem;
     text-align: left;
-    font-size: 1rem; /* Global section font size */
+    font-size: 1rem;
 }
 
 .section h2 {
     margin-bottom: 1rem;
     color: #007acc;
-    font-family: Arial, sans-serif; /* Original font */
-    font-size: 1.5rem; /* Consistent heading font size */
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
     text-align: left;
 }
 
 .section p {
     margin-bottom: 0rem;
     text-align: left;
-    font-family: Arial, sans-serif; /* Original font */
-    font-size: 1rem; /* Consistent paragraph font size */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -259,28 +248,28 @@ a:hover {
     color: #fff;
     text-align: left;
     padding: 1rem;
-    font-family: Arial, sans-serif; /* Original font */
-    font-size: 1rem; /* Consistent footer font size */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
 
 .team-list {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
     padding: 0;
 }
 
 .team-list li {
-    margin-bottom: 20px; /* Add spacing between team members */
+    margin-bottom: 20px;
 }
 
 .team-member {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .team-photo {
-    width: 150px; /* Set image width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 15px; /* Add spacing between image and text */
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
 }
 
 .team-info h3 {
@@ -297,12 +286,12 @@ a:hover {
     max-width: 990px;
     border-collapse: collapse;
     margin: 1rem 0;
-    font-size: 0.9rem; /* Adjust font size as needed */
+    font-size: 0.9rem;
 }
 
 .previous-members-table th,
 .previous-members-table td {
-    font-size: 0.9rem; /* Adjust font size as needed */
+    font-size: 0.9rem;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -313,60 +302,48 @@ a:hover {
     color: white;
 }
 
-    .research-item {
-        margin-bottom: 20px; /* Spacing between research items */
-    }
+.research-item {
+    margin-bottom: 20px;
+}
 
-    .research-item h4 {
-        margin-bottom: 10px; /* Add spacing below the heading */
-        color: #007acc; /* Customize heading color */
-        font-size: 1rem; /* Adjust font size as needed */
-        text-align: left;
-    }
+.research-item h4 {
+    margin-bottom: 10px;
+    color: #007acc;
+    font-size: 1rem;
+    text-align: left;
+}
 
+.research-content {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.research-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.research-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
     .research-content {
-        display: flex;
-        flex-direction: row; /* Image and text side by side */
-        gap: 15px; /* Spacing between image and text */
-        align-items: flex-start; /* Align items at the top */
+        flex-direction: column;
+        align-items: center;
     }
 
     .research-image {
-        width: 200px; /* Fixed width for images */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 8px; /* Optional: Add rounded corners */
-        border: 1px solid #ddd; /* Optional: Add border around the image */
-    }
-
-    .research-content p {
-        margin: 0; /* Remove default paragraph margins */
-        font-size: 1rem; /* Set font size for the text */
-        line-height: 1.6; /* Adjust line spacing for readability */
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .research-content {
-            flex-direction: column; /* Stack image and text vertically */
-            align-items: center; /* Center align content */
-        }
-
-        .research-image {
-            margin-bottom: 10px; /* Add spacing below the image */
-        }
+        margin-bottom: 10px;
     }
 }
 
-.header-container,
-.hero,
-.about-container,
-.section,
-.footer .container {
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#publications h2 {
+#publications li a strong {
     color: lightblue;
 }
