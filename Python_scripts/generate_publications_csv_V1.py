@@ -2,7 +2,7 @@ import pandas as pd
 from collections import defaultdict
 
 # Define the path for the input CSV file and the output HTML file
-csv_file_path = r"C:\Users\osho799e\Downloads\scopus (1).csv"  # Replace with your actual CSV file path
+csv_file_path = r"C:\Users\osho799e\Downloads\scopus_export_Nov.csv"  # Replace with your actual CSV file path
 output_html_path = r"C:\Users\osho799e\Lab_WebPage\test\bib_publications.html"  # Replace with your desired output path
 
 # Load the CSV file
